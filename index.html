@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My Portfolio</title>
+
+   
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+
+    <!-- Bootstrap JavaScript and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZE+gB6DkBfHVb+I3bcOaZmKwDdH7T9+ONM6SviF8kUUeI9HoC4z0FwK6zylfjwM" crossorigin="anonymous"></script>
+
+</head>
+
+
+  <body>
+
+ <!-- Navigation Bar Section -->
+<nav id="desktop-nav">
+  <div class="logo">Rasty Cannu Espartero</div>
+  <div>
+      <ul class="nav-links">
+          <li><a href="#profile">Home</a></li>  <!-- New Home Link -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+  </div>
+</nav>
+
+<nav id="hamburger-nav">
+  <div class="logo">Rasty Espartero</div>
+  <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="menu-links">
+          <li><a href="#profile" onclick="toggleMenu()">Home</a></li>  <!-- New Home Link -->
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+  </div>
+</nav>
+
+    
+    <!-- Profile Section -->
+<section id="profile">
+  <div class="section__pic-container">
+      <img src="./assets/profile-pic.jpg" 
+           alt="Rasty Espartero profile picture" 
+           class="img-fluid profile-img">
+  </div>
+  <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Rasty Cannu Espartero</h1>
+      <p class="section__text__p2">Fullstack Developer</p>
+      <div class="btn-container">
+          <!-- Updated Download Button to Ensure Resume is Downloaded -->
+          <a href="./assets/resume-example.pdf" download="RastyEspartero_Resume.pdf">
+              <button class="btn btn-color-2">Download CV</button>
+          </a>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+              Contact Info
+          </button>
+      </div>
+      <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+               onclick="location.href='https://www.linkedin.com/in/rastyespartero/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+               onclick="location.href='https://github.com/RastyFullStaxx'" />
+      </div>
+  </div>
+ <!-- Arrow Icon -->
+ <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#about'">
+
+</section>
+
+
+
+<!-- About Section -->
+<section id="about" class="container py-5 position-relative text-center">
+
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+
+  <div class="row justify-content-center text-center">
+      <!-- Profile Picture -->
+      <div class="col-lg-5 d-flex justify-content-center">
+          <div class="section__pic-container">
+              <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic img-fluid">
+          </div>
+      </div>
+
+      <!-- Work Experience & Education Table -->
+      <div class="col-lg-8">
+          <div class="table-container">
+              <table class="table table-bordered shadow-sm">
+                  <thead class="table-dark">
+                      <tr>
+                          <th>Institution / Company</th>
+                          <th>Position / Degree</th>
+                          <th>Years</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Work Experience -->
+                      <tr>
+                          <td>Sutherland Global Philippines</td>
+                          <td>Technical Care Expert</td>
+                          <td>July 2022 - March 2023</td>
+                      </tr>
+                      <tr>
+                          <td>Department of Labor and Employment</td>
+                          <td>Community Keeper</td>
+                          <td>July - August 2022</td>
+                      </tr>
+                      <tr>
+                          <td>US-Based Law Firm</td>
+                          <td>Lawyer Assistant</td>
+                          <td>2020 - Present</td>
+                      </tr>
+                      <tr>
+                          <td>Freelance</td>
+                          <td>Programmer</td>
+                          <td>2021 - Present</td>
+                      </tr>
+
+                      <!-- Education -->
+                      <tr>
+                          <td>Polytechnic University of the Philippines</td>
+                          <td>Bachelor of Science in Computer Science</td>
+                          <td>2022 - Present</td>
+                      </tr>
+                      <tr>
+                          <td>Higher School of the University of Makati</td>
+                          <td>Technology, Science, and Mathematics (STEM)</td>
+                          <td>2020 - 2022</td>
+                      </tr>
+                      <tr>
+                          <td>Fort Bonifacio High School</td>
+                          <td>Secondary Education</td>
+                          <td>2016 - 2020</td>
+                      </tr>
+                      <tr>
+                          <td>West Rembo Elementary School</td>
+                          <td>Primary Education</td>
+                          <td>2009 - 2016</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+
+  <!-- Arrow Icon -->
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
+
+</section>
+
+
+
+
+
+
+
+<section id="carousel-section" class="container py-5">
+  <p class="section__text__p1 text-center">My Best</p>
+  <h1 class="title text-center fw-bold">Work Highlights</h1>
+
+  <div id="workHighlightsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide-to="4"></button>
+          <button type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide-to="5"></button>
+      </div>
+
+      <!-- Carousel Inner (Slide Content) -->
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="./assets/biolabs.png" class="d-block w-100 carousel-img" alt="Biolabs">
+              <div class="carousel-caption d-md-block">
+                  <h5 class="fw-bold">🏆 Biolabs – Virtual Laboratory</h5>
+                  <p>G12 Capstone Champion | A virtual lab revolutionizing science education.</p>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <img src="./assets/smartplate.png" class="d-block w-100 carousel-img" alt="SmartPlate">
+              <div class="carousel-caption d-md-block">
+                  <h5 class="fw-bold">🍽 SmartPlate – Meal Suggestion System</h5>
+                  <p>AI-powered meal planner tailored for PUP dorm students.</p>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <img src="./assets/merc.png" class="d-block w-100 carousel-img" alt="MERC">
+              <div class="carousel-caption d-md-block">
+                  <h5 class="fw-bold">✈️ MERC Airline Ticketing System</h5>
+                  <p>A full-stack web app for seamless flight ticket management.</p>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <img src="./assets/unbroke.png" class="d-block w-100 carousel-img" alt="Unbroke">
+              <div class="carousel-caption d-md-block">
+                  <h5 class="fw-bold">💰 Unbroke – Smart Financial Tracker</h5>
+                  <p>Helping users take control of their finances with data-driven insights.</p>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <img src="./assets/4ph.png" class="d-block w-100 carousel-img" alt="4PH">
+              <div class="carousel-caption d-md-block">
+                  <h5 class="fw-bold">🏡 4PH – Pagibig Housing Application</h5>
+                  <p>A smart solution for housing loan applications.</p>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+              <img src="./assets/prismatic.png" class="d-block w-100 carousel-img" alt="Prismatic">
+              <div class="carousel-caption d-md-block">
+                  <h5 class="fw-bold">🖥 Prismatic – Novel Programming Language</h5>
+                  <p>A next-gen programming language simplifying software development.</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Carousel Navigation Buttons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#workHighlightsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+</section>
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    <!-- Skills Section -->
+    <section id="experience" class="container py-5">
+        <p class="section__text__p1 text-center text-muted">Explore My</p>
+        <h1 class="title text-center fw-bold">Skills</h1>
+
+        <!-- Skills Grid (Ensures uniform margins) -->
+        <div class="skills-grid">
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="C Icon" class="skill-icon">
+                <h5>C</h5>
+                <p class="card-text text-muted">Experienced</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="C# Icon" class="skill-icon">
+                <h5>C#</h5>
+                <p class="card-text text-muted">Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="Java Icon" class="skill-icon">
+                <h5>Java</h5>
+                <p class="card-text text-muted">Basic</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="Python Icon" class="skill-icon">
+                <h5>Python</h5>
+                <p class="card-text text-muted">Experienced</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="COBOL Icon" class="skill-icon">
+                <h5>COBOL</h5>
+                <p class="card-text text-muted">Basic</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="MySQL Icon" class="skill-icon">
+                <h5>MySQL</h5>
+                <p class="card-text text-muted">Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="HTML Icon" class="skill-icon">
+                <h5>HTML</h5>
+                <p class="card-text text-muted">Experienced</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="CSS Icon" class="skill-icon">
+                <h5>CSS</h5>
+                <p class="card-text text-muted">Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="JavaScript Icon" class="skill-icon">
+                <h5>JavaScript</h5>
+                <p class="card-text text-muted">Basic</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="React Icon" class="skill-icon">
+                <h5>React</h5>
+                <p class="card-text text-muted">Experienced</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="Bootstrap Icon" class="skill-icon">
+                <h5>Bootstrap</h5>
+                <p class="card-text text-muted">Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="Figma Icon" class="skill-icon">
+                <h5>Figma</h5>
+                <p class="card-text text-muted">Basic</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="Adobe Icon" class="skill-icon">
+                <h5>Adobe</h5>
+                <p class="card-text text-muted">Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="Git Icon" class="skill-icon">
+                <h5>Git</h5>
+                <p class="card-text text-muted">Experienced</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="PostgreSQL Icon" class="skill-icon">
+                <h5>PostgreSQL</h5>
+                <p class="card-text text-muted">Intermediate</p>
+            </div>
+
+            <div class="skill-card">
+                <img src="./assets/checkmark.png" alt="MongoDB Icon" class="skill-icon">
+                <h5>MongoDB</h5>
+                <p class="card-text text-muted">Basic</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/merc.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MERC Airline Ticketing System</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RastyFullStaxx/MERC-AIRLINE-TICKETING-SYSTEM'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/4ph.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">4PH Pagibig Loan Application</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RastyFullStaxx/4PH_PAGIBIG_HOUSING.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/smartplate.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">SmartPlate AI Food Suggestor</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/RastyFullStaxx/SmartPlate.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+  
+      <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+              <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+              <p><a href="mailto:rcannuespartero@gmail.com">rcannuespartero@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+              <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+              <p><a href="https://www.linkedin.com/in/rastyespartero/">LinkedIn</a></p>
+          </div>
+      </div>
+  </section>
+  
+  <footer>
+      <nav>
+          <div class="nav-links-container">
+              <ul class="nav-links">
+                  <li><a href="#profile">Home</a></li>  <!-- New Home Link -->
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#experience">Skills</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
+      </nav>
+      <p>Copyright &#169; 2025 Rasty Espartero. All Rights Reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+  
+    
+ <!-- Bootstrap 5.3.3 JS (Bundle Includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZE+gB6DkBfHVb+I3bcOaZmKwDdH7T9+ONM6SviF8kUUeI9HoC4z0FwK6zylfjwM" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

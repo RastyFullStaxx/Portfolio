@@ -1,0 +1,735 @@
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* White to Light Gray */
+    min-height: 100vh; /* Ensures it covers full height */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures vertical centering */
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.profile-img {
+    width: 120%; /* Makes the image responsive */
+    height: 120%; /* Ensures it fills the container */
+    max-width: 250px; /* Adjust as needed */
+    max-height: 250px; /* Adjust as needed */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Prevents stretching */
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+#about {
+    position: relative;
+}
+
+/* Layout Containers */
+.section-container {
+    gap: 4rem;
+    height: auto;
+}
+
+/* Profile Picture Container */
+.section__pic-container {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centers horizontally */
+}
+
+/* Profile Picture */
+.about-pic {
+    border-radius: 3rem;
+    width: 100%; /* Responsive */
+    height: 110%; /* Prevent stretching */
+    object-fit: cover; /* Keeps aspect ratio */
+}
+
+/* About Containers */
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Details Boxes */
+.details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center;
+}
+
+/* Text and Icons */
+.text-container {
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Arrow Position */
+.arrow {
+    position: absolute;
+    right: -3rem;
+    bottom: 2.5rem;
+}
+/* Work & Education Table Styling */
+.table-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Floating shadow effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Table Animation */
+.table-container:hover {
+    transform: translateY(-5px); /* Lifts the table slightly on hover */
+    box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.2); /* Enhances floating effect */
+}
+
+/* Table Aesthetic */
+.table {
+    border-radius: 10px;
+    overflow: hidden; /* Keeps borders clean */
+    background: white;
+}
+
+/* Table Headers */
+.table thead th {
+    background: linear-gradient(to right, #555555, #0d0e0e);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Table Rows */
+.table tbody tr {
+    transition: 0.3s ease-in-out;
+}
+
+/* Alternating Row Colors */
+.table tbody tr:nth-child(even) {
+    background: #f8f9fa; /* Light Gray */
+}
+
+/* Hover Effect */
+.table tbody tr:hover {
+    background: #dfe6e9;
+    transform: scale(1.01);
+}
+
+/* Table Cells */
+.table td {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* First Column Styling */
+.table td:first-child {
+    font-weight: bold;
+}
+
+
+
+
+/* CAROUSEL SECTION */
+#carousel-section {
+    position: relative;
+    padding: 60px 0;
+}
+
+/* Ensure images scale properly */
+.carousel-inner img {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    object-fit: cover; /* Prevents stretching */
+    border-radius: 8px;
+}
+
+/* Fixes stacking issue by ensuring slides behave correctly */
+.carousel-item {
+    display: none; /* Ensures only one slide shows at a time */
+    transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block; /* Only active slide is shown */
+}
+
+/* Captions: Improve readability */
+.carousel-caption {
+    background: rgb(53, 53, 53);/* Dark background */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Caption Text */
+.carousel-caption h5 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+/* Navigation Arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    width: 50px;
+    height: 50px;
+}
+
+/* Indicator Bullets */
+.carousel-indicators [data-bs-target] {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .carousel-inner img {
+        height: 300px; /* Adjust height for smaller screens */
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-indicators {
+        bottom: 10px;
+    }
+}
+
+/* Add border to carousel images */
+.carousel-inner img {
+    width: 100%;
+    height: 500px; /* Ensures consistent height */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 12px; /* Adds rounded corners */
+    border: 5px solid #fff; /* White border for a clean look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* SKILLS SECTION */
+
+#skills {
+  position: relative;
+  padding: 60px 0;
+}
+
+/* Skill Grid Layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Auto adjust */
+  gap: 20px; /* Uniform spacing */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual Skill Card */
+.skill-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid black;  /* 🟢 Added Black Border */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ffffff, #f7f7f7); /* Default gradient */
+}
+
+/* Hover effect */
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Skill Card Text */
+.skill-card h5 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.skill-card p {
+  color: rgb(85, 85, 85);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+  .skills-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .skill-card {
+      padding: 15px;
+  }
+}
+
+
+/* THEMING: Gradient Backgrounds for Each Skill */
+.skill-card:nth-child(1) { background: linear-gradient(135deg, #e3f2fd, #90caf9); } /* Light Blue (C) */
+.skill-card:nth-child(2) { background: linear-gradient(135deg, #f3e5f5, #ce93d8); } /* Light Purple (C#) */
+.skill-card:nth-child(3) { background: linear-gradient(135deg, #ffebee, #ef5350); } /* Light Red (Java) */
+.skill-card:nth-child(4) { background: linear-gradient(135deg, #e8f5e9, #66bb6a); } /* Light Green (Python) */
+.skill-card:nth-child(5) { background: linear-gradient(135deg, #efebe9, #a1887f); } /* Light Brown (COBOL) */
+.skill-card:nth-child(6) { background: linear-gradient(135deg, #e0f7fa, #26c6da); } /* Light Cyan (MySQL) */
+.skill-card:nth-child(7) { background: linear-gradient(135deg, #fff3e0, #ffb74d); } /* Light Orange (HTML) */
+.skill-card:nth-child(8) { background: linear-gradient(135deg, #e1f5fe, #42a5f5); } /* Light Sky Blue (CSS) */
+.skill-card:nth-child(9) { background: linear-gradient(135deg, #ede7f6, #5c6bc0); } /* Light Indigo (JavaScript) */
+.skill-card:nth-child(10) { background: linear-gradient(135deg, #e8eaf6, #3949ab); } /* Soft Blue (React) */
+.skill-card:nth-child(11) { background: linear-gradient(135deg, #fbe9e7, #ff8a65); } /* Soft Peach (Bootstrap) */
+.skill-card:nth-child(12) { background: linear-gradient(135deg, #f3e5f5, #ba68c8); } /* Soft Lavender (Figma) */
+.skill-card:nth-child(13) { background: linear-gradient(135deg, #efebe9, #757575); } /* Light Gray (Adobe) */
+.skill-card:nth-child(14) { background: linear-gradient(135deg, #e3f2fd, #64b5f6); } /* Soft Sky Blue (Git) */
+.skill-card:nth-child(15) { background: linear-gradient(135deg, #e8f5e9, #388e3c); } /* Light Mint (PostgreSQL) */
+.skill-card:nth-child(16) { background: linear-gradient(135deg, #ffecb3, #ffca28); } /* Light Yellow (MongoDB) */
+
+
+
+
+
+
+
+
+
+
+/* PROJECTS SECTION */
+#projects {
+  position: relative;
+}
+
+/* Project Card Styling */
+.project-card {
+  border: none;
+  border-radius: 1.5rem; /* Rounded corners */
+  background: rgb(250, 250, 250);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover Effect */
+.details-container:hover {
+  transform: translateY(-5px); /* Floating effect */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-img {
+  border-radius: 1.5rem 1.5rem 0 0;
+  width: 100%;
+  height: 220px; /* Set fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Project Titles */
+.card-title {
+  font-weight: 600;
+  color: black;
+}
+
+/* Project Buttons */
+.project-btn {
+  color: black;
+  border: 1px solid rgb(163, 163, 163);
+  transition: all 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+/* Button Hover */
+.project-btn:hover {
+  background-color: rgb(163, 163, 163);
+  color: white;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+  .project-img {
+      height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-img {
+      height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card {
+      border-radius: 1rem;
+  }
+  .project-img {
+      height: 160px;
+  }
+}
+
+
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}
