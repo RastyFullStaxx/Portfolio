@@ -345,12 +345,21 @@ section {
 }
 /* Work & Education Table Styling */
 .table-container {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: #fff;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Floating shadow effect */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Floating shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  /* Center the Table */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%; /* Adjust width to ensure it doesn't span full screen */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Table Animation */
@@ -361,9 +370,9 @@ section {
 
 /* Table Aesthetic */
 .table {
-    border-radius: 10px;
-    overflow: hidden; /* Keeps borders clean */
-    background: white;
+  width: 100%; /* Ensures it doesn't exceed container */
+  max-width: 900px; /* Adjust this if needed */
+  text-align: center;
 }
 
 /* Table Headers */
