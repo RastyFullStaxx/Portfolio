@@ -7,6 +7,7 @@
   padding: 0;
 }
 
+
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* White to Light Gray */
@@ -49,11 +50,41 @@ nav {
   font-size: 1.5rem;
 }
 
+/* Reset all anchor tag styles */
 a {
-  color: black;
-  text-decoration: none;
-  text-decoration-color: white;
+  color: inherit; /* Keeps the original text color */
+  text-decoration: none !important; /* Ensures no underline */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
+
+/* Restore hover effect if needed */
+a:hover {
+  color: rgb(90, 90, 90); /* Slightly darkens on hover */
+  text-decoration: none !important; /* Prevents underline */
+}
+
+/* Navbar links */
+.nav-links a {
+  font-weight: 500;
+  color: black; /* Ensures the navbar text stays black */
+}
+
+/* Contact Info Links */
+.contact-info-container a {
+  font-weight: 500;
+  color: black; /* Ensures LinkedIn & Email keep previous color */
+}
+
+/* Footer Links */
+footer a {
+  color: black;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: rgb(60, 60, 60); /* Slightly darker on hover */
+}
+
 
 a:hover {
   color: grey;
@@ -166,6 +197,11 @@ section {
 
 /* PROFILE SECTION */
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 #profile {
     display: flex;
     justify-content: center;
@@ -184,10 +220,10 @@ section {
 }
 
 .profile-img {
-    width: 120%; /* Makes the image responsive */
-    height: 120%; /* Ensures it fills the container */
-    max-width: 250px; /* Adjust as needed */
-    max-height: 250px; /* Adjust as needed */
+    width: 250%; /* Makes the image responsive */
+    height: 250%; /* Ensures it fills the container */
+    max-width: 180px; /* Adjust as needed */
+    max-height: 279px; /* Adjust as needed */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Prevents stretching */
 }
@@ -229,52 +265,73 @@ section {
   height: 2rem;
 }
 
-/* BUTTONS */
-
+/* BUTTON CONTAINER */
 .btn-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
+/* GENERAL BUTTON STYLES */
 .btn {
   font-weight: 600;
-  transition: all 300ms ease;
-  padding: 1rem;
-  width: 8rem;
+  transition: all 300ms ease-in-out;
+  padding: 0.8rem 1.5rem;
+  width: auto;
+  min-width: 9rem;
   border-radius: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  border-width: 2px;
 }
 
-.btn-color-1,
+/* DOWNLOAD CV BUTTON - WHITE BACKGROUND, BLACK TEXT & BORDER */
 .btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid;
+  background: white !important;
+  color: black !important;
+  border: 2px solid black !important;
 }
 
-.btn-color-1:hover,
 .btn-color-2:hover {
-  cursor: pointer;
+  background: black !important;
+  color: white !important;
+  border: 2px solid white !important;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgb(53, 53, 53);
-  color: white;
+/* CONTACT INFO BUTTON - MATTE BLACK BACKGROUND, WHITE TEXT & BORDER */
+.btn-color-1 {
+  background: black !important;
+  color: white !important;
+  border: 2px solid black !important;
 }
 
 .btn-color-1:hover {
-  background: rgb(0, 0, 0);
+  background: white !important;
+  color: black !important;
+  border: 2px solid black !important;
 }
 
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
-
-.btn-container {
+/* SOCIAL ICONS */
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
   gap: 1rem;
+}
+
+/* ICON STYLE */
+.icon {
+  cursor: pointer;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
 }
 
 /* ABOUT SECTION */
@@ -371,7 +428,7 @@ section {
 /* Table Aesthetic */
 .table {
   width: 100%; /* Ensures it doesn't exceed container */
-  max-width: 900px; /* Adjust this if needed */
+  max-width: 1500px; 
   text-align: center;
 }
 
@@ -622,6 +679,114 @@ section {
 
 /* PROJECTS SECTION */
 #projects {
+    position: relative;
+}
+
+/* Project Card Styling */
+.project-card {
+    border: none;
+    border-radius: 1.5rem; /* Rounded corners */
+    background: rgb(250, 250, 250);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: translateY(-5px); /* Floating effect */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-img {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    height: 220px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Project Titles */
+.card-title {
+    font-weight: 600;
+    color: black;
+}
+
+/* Project Description */
+.card-text {
+    font-size: 0.95rem;
+    color: rgb(90, 90, 90);
+}
+
+/* GitHub Button - Matte Black */
+.github-btn {
+    background-color: #232323; /* Matte black */
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for GitHub Button */
+.github-btn:hover {
+    background-color: #000;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px); /* Slight lift */
+}
+
+/* Regular Project Button */
+.project-btn {
+    color: black;
+    border: 1px solid rgb(163, 163, 163);
+    transition: all 0.2s ease-in-out;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+/* Button Hover */
+.project-btn:hover {
+    background-color: rgb(163, 163, 163);
+    color: white;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+    .project-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-img {
+        height: 180px;
+    }
+
+    .github-btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card {
+        border-radius: 1rem;
+    }
+
+    .project-img {
+        height: 160px;
+    }
+
+    .github-btn {
+        width: 100%; /* Make it full width on smaller screens */
+    }
+}
+#projects {
   position: relative;
 }
 
@@ -635,7 +800,7 @@ section {
 }
 
 /* Hover Effect */
-.details-container:hover {
+.project-card:hover {
   transform: translateY(-5px); /* Floating effect */
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.15);
 }
@@ -644,7 +809,7 @@ section {
 .project-img {
   border-radius: 1.5rem 1.5rem 0 0;
   width: 100%;
-  height: 220px; /* Set fixed height */
+  height: 220px; /* Fixed height */
   object-fit: cover; /* Maintain aspect ratio */
 }
 
@@ -654,12 +819,21 @@ section {
   color: black;
 }
 
+/* Project Description */
+.card-text {
+  font-size: 0.95rem;
+  color: rgb(90, 90, 90);
+}
+
 /* Project Buttons */
 .project-btn {
   color: black;
   border: 1px solid rgb(163, 163, 163);
   transition: all 0.2s ease-in-out;
   border-radius: 8px;
+  background-color: transparent;
+  padding: 8px 16px;
+  font-weight: 500;
 }
 
 /* Button Hover */
@@ -685,10 +859,12 @@ section {
   .project-card {
       border-radius: 1rem;
   }
+
   .project-img {
       height: 160px;
   }
 }
+
 
 
 
